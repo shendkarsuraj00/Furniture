@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FurnitureTabView: View {
     
+    @StateObject var cartManger = CartManager()
     @State var currentTab: TabBar = .Home
     
     init() {
@@ -100,4 +101,5 @@ struct FurnitureTabView: View {
 
 #Preview {
     FurnitureTabView()
+        .environmentObject(CartManager())
 }
